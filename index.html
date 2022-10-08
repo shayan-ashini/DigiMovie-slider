@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet/index.css">
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>DigiMovie slider</title>
+</head>
+
+<body>
+
+    <main>
+        <div><img src="assets/img/back_one_head.png" alt=""></div>
+
+
+        <section>
+            <span id="right"><i class=" icon-right-open"></i></span>
+            <span id="left"><i class=" icon-left-open"></i></span>
+
+            <div class="slider">
+
+                <div id="base1">
+
+                    <div class="pic"><img src="assets/img/brat.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/thor big.jpg" alt="">
+                        <span>
+                            <div><span>6.7</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/pino.jpg" alt=""></div>
+
+                </div>
+
+
+
+                <div id="base2">
+
+                    <div class="pic"><img src="assets/img/thor.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/pino big.jpg" alt="">
+                        <span>
+                            <div><span>5.6</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/nope.jpg" alt=""></div>
+
+                </div>
+
+
+                <div id="base3">
+
+                    <div class="pic"><img src="assets/img/pino.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/nope big.jpg" alt="">
+                        <span>
+                            <div><span>7.3</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/tom.jpg" alt=""></div>
+
+                </div>
+
+
+                <div id="base4">
+
+                    <div class="pic"><img src="assets/img/nope.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/tom big.jpg" alt="">
+                        <span>
+                            <div><span>8.5</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/dog.jpg" alt=""></div>
+
+                </div>
+
+
+                <div id="base5">
+
+                    <div class="pic"><img src="assets/img/tom.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/dog big.jpg" alt="">
+                        <span>
+                            <div><span>7.9</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/shift.jpg" alt=""></div>
+
+                </div>
+
+
+                <div id="base6">
+
+                    <div class="pic"><img src="assets/img/dog.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/shift big.jpg" alt="">
+                        <span>
+                            <div><span>6.2</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/brat.jpg" alt=""></div>
+
+                </div>
+
+
+                <div id="base7">
+
+                    <div class="pic"><img src="assets/img/shift.jpg" alt=""></div>
+                    <div class="pic"><img src="assets/img/brat big.jpg" alt="">
+                        <span>
+                            <div><span>7.5</span> / 10</div>
+                            <div>IMDb</div>
+                        </span>
+                    </div>
+                    <div class="pic"><img src="assets/img/thor.jpg" alt=""></div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+    </main>
+
+
+    <script>
+
+        let turn = 0
+
+        let slid = document.querySelectorAll('.slider>div')
+        let slider = document.getElementsByClassName('slider')[0]
+        slider.style.width = (1200 * slid.length) + 'px'
+
+
+
+        let right = document.getElementById('right')
+        let left = document.getElementById('left')
+
+
+        right.addEventListener('click', function () {
+
+
+            if (turn < slid.length - 1) {
+                turn++
+                slider.style.transform = 'translateX(-' + turn * 1200 + 'px)'
+            } else {
+                turn = 0
+                slider.style.transform = 'translateX(-' + turn * 1200 + 'px)'
+            }
+
+        })
+
+
+        left.addEventListener('click', function () {
+
+            if (turn > 0) {
+                turn--
+                slider.style.transform = 'translateX(-' + turn * 1200 + 'px)'
+
+            } else {
+                turn = (slid.length) - 1
+                slider.style.transform = 'translateX(-' + turn * 1200 + 'px)'
+            }
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>

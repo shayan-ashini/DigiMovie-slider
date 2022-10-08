@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#050505;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+main>div{
+    position: absolute;
+}
+main>div:nth-of-type(1){
+    left: -5%;
+    bottom: 33%;
+}
+main>div:nth-of-type(2){
+    right: 0;
+}
+
+section{
+    width: 1200px;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    height: 100%;
+    transition: 0.1s;
+    
+    
+}
+
+
+#base1,
+#base2,
+#base3,
+#base4,
+#base5,
+#base6,
+#base7
+{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.pic{
+    position: absolute;
+    top: 10%;
+    border-radius: 10px;
+}
+.pic:nth-last-of-type(1){
+    width: 250px;
+    height: 350px;
+    left: 2%;
+    top: 15%;
+    
+}
+.pic:nth-last-of-type(2){
+    width: 600px;
+    height: 400px;
+    left: 25%;
+    transform: scale(1.1);
+    z-index: 99;
+    position: relative;
+    
+}
+.pic:nth-last-of-type(3){
+    width: 250px;
+    height: 350px;
+    right: 2%;
+    top: 15%;
+}
+
+.pic>img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    border-radius: 10px;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+
+#left,
+#right{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:#1F1F1F;
+    z-index: 1000;
+    border-radius: 50%;
+    top: 45%;
+    cursor: pointer;
+
+}
+#left>i{
+    color: #6A6A6A;
+}
+#right>i{
+    color: #6A6A6A;
+}
+
+#left{
+    left: 0;
+    
+}
+#right{
+    right: 0;
+}
+
+
+/* ////////////////////////////////////////after/////////////////////////////////////////// */
+
+#base1>div:nth-of-type(2)::after,
+#base2>div:nth-of-type(2)::after,
+#base3>div:nth-of-type(2)::after,
+#base4>div:nth-of-type(2)::after,
+#base5>div:nth-of-type(2)::after,
+#base6>div:nth-of-type(2)::after,
+#base7>div:nth-of-type(2)::after
+{
+    content: '';
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    color: white;
+    left: 5%;
+    bottom: 5%;
+}
+#base1>div:nth-of-type(2)::after{
+    content: 'Thor: Love and Thunder 2022';
+
+}
+#base2>div:nth-of-type(2)::after{
+    content: 'Pinocchio 2022';
+
+}
+#base3>div:nth-of-type(2)::after{
+    content: 'Nope 2022';
+
+}
+#base4>div:nth-of-type(2)::after{
+    content: 'Top Gun: Maverick 2022';
+
+}
+#base5>div:nth-of-type(2)::after{
+    content: 'DC League of Super-Pets 2022';
+
+}
+#base6>div:nth-of-type(2)::after{
+    content: 'Day Shift 2022';
+
+}
+#base7>div:nth-of-type(2)::after{
+    content: 'Bullet Train 2022';
+
+}
+
+
+/* ////////////////////////////////////////before/////////////////////////////////////////// */
+
+#base1>div:nth-of-type(2)::before,
+#base2>div:nth-of-type(2)::before,
+#base3>div:nth-of-type(2)::before,
+#base4>div:nth-of-type(2)::before,
+#base5>div:nth-of-type(2)::before,
+#base6>div:nth-of-type(2)::before,
+#base7>div:nth-of-type(2)::before
+{
+    content: '';
+    font-size: 12px;
+    font-weight: bolder;
+    position: absolute;
+    color: #E88816;
+    left: 5%;
+    top: 5%;
+
+}
+
+
+#base1>div:nth-of-type(2)::before{
+    content: '2160p 4K BluRay';
+    
+
+}
+#base2>div:nth-of-type(2)::before{
+    content: '2160p 4K WEB-DL';
+
+}
+#base3>div:nth-of-type(2)::before{
+    content: '1080p WEB-DL';
+
+}
+#base4>div:nth-of-type(2)::before{
+    content: '2160p 4K WEB-DL IMAX';
+
+}
+#base5>div:nth-of-type(2)::before{
+    content: '2160p 4K WEB-DL';
+
+}
+#base6>div:nth-of-type(2)::before{
+    content: '1080p WEB-DL';
+
+}
+#base7>div:nth-of-type(2)::before{
+    content: '1080p WEB-DL Full HD';
+
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.pic>span{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    font-weight: bold;
+}
+
+
+.pic>span>div:nth-child(1){
+    font-size: 15px;
+    color: rgb(185, 184, 184);
+
+}
+.pic>span>div:nth-child(1)>span{
+    color: #FFC107;
+    font-size: 20px;
+
+}
+
+.pic>span>div:nth-child(2){
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #FFC107;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
